@@ -43,7 +43,9 @@ def solve_and_submit(browser, model_list, labels_list):
     time.sleep(0.2)
 
 
-def break_captcha(browser, html_source: str, model_list, labels_list):
+def break_captcha(browser, html_source: str,
+                  model_list, labels_list,
+                  max_attempts=20):
     """ Loops in a CAPTCHA page until it is solved
     
     :param browser: a Selenium webdriver instance
@@ -52,8 +54,13 @@ def break_captcha(browser, html_source: str, model_list, labels_list):
     :param labels_list: list of 5 LabelBinarizer objects
     :return: new html_source
     """
-    while '<title>Comprasnet' in html_source:
+    attempts = 0
+    while '<title>Comprasnet' in html_source and attempts < max_attempts:
         solve_and_submit(browser, model_list, labels_list)
         html_source = browser.page_source
-    
-    return(html_source)
+        attempts += 1
+
+    if attempts == max_attempts:
+        return('max_attempts')
+    else:
+        return(html_source)

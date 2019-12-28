@@ -1,4 +1,7 @@
-old/
+logs/max_attempts.csv
+logs/progress.csv
+logs/server_error.csv
+logs/skipped.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -8,9 +8,10 @@ from .clipboard import load_image_from_clipboard
 
 from .segmentation import *
 from .prediction import *
-from .logs import *
+from .LogFile import LogFile
 from .break_captcha import *
 from .save_auction_summary import *
 from .search_auction import *
-from .check_for_supplementary_summary import *
-from .click_see_following_summary import *
+from .check_for_supplementary_records import *
+from .click_see_next_entry import *
+from .check_consec_errors import *
