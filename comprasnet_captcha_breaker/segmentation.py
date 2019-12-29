@@ -11,11 +11,11 @@ def split_captcha(captcha, captcha_class):
     :param captcha_class: a string indicating the CAPTCHA type
     :return: a list of 6 numpy.ndarray objects
     """
-    if captcha_class in ['Bubble', 'BubbleCut']:
+    if captcha_class in ['bubble', 'bubble_cut']:
         letters = split_bubble(captcha)
-    elif captcha_class == 'Wave':
+    elif captcha_class == 'wave':
         letters = split_wave(captcha)
-    elif captcha_class == 'Dotted':
+    elif captcha_class == 'dotted':
         letters = split_dotted(captcha)
     
     return(letters)

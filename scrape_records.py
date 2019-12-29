@@ -139,7 +139,8 @@ while i <= total:
                     continue
                 
                 # Saving html file
-                ccb.save_auction_summary(html_source, OUTPUT_FOLDER,
+                ccb.save_auction_summary(html_source,
+                                         SUPPLEMENTARY_OUTPUT_FOLDER,
                                          auction_id, num_doc=ata)
                 time.sleep(1)
         

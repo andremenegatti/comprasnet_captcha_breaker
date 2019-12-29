@@ -31,7 +31,7 @@ def solve_and_submit(browser, model_list, labels_list):
                                                labels=labels_list[0])
     
     # Predicting solution
-    if predicted_class == 'DottedWave':
+    if predicted_class == 'dotted_wave':
         captcha_text = 'ERROR'
     else:
         captcha_text = predict_letters(captcha, predicted_class,

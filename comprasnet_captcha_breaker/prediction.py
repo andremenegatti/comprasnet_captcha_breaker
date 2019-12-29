@@ -6,7 +6,7 @@ from comprasnet_captcha_breaker.segmentation import split_captcha
 def predict_captcha_type(captcha, model, labels):
     """ Predicts CAPTCHA type using a CNN
     
-    Identified types: Bubble, BubbleCut, Dotted, DottedWave, Wave
+    Identified types: bubble, bubble_cut, dotted, dotted_wave, wave
     
     :param captcha: thresholded captcha as a 90x200 numpy.ndarray
     :param model: Keras Sequential model
@@ -72,10 +72,10 @@ def predict_letters(captcha,
                     model_list,
                     labels_list,
                     param_dict={
-                            'Wave': {'index': 1, 'size': 60},
-                            'Dotted': {'index': 2, 'size': 60},
-                            'Bubble': {'index': 3, 'size': 86},
-                            'BubbleCut': {'index': 4, 'size': 85}
+                            'wave': {'index': 1, 'size': 60},
+                            'dotted': {'index': 2, 'size': 60},
+                            'bubble': {'index': 3, 'size': 86},
+                            'bubble_cut': {'index': 4, 'size': 85}
                             }
                     ):
     """ Solves the CAPTCHA using appropriate CNN from supplied list
