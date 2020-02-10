@@ -49,7 +49,9 @@ browser = webdriver.Chrome("chromedriver")
 # Iterating
 while i <= total:
     print(f'\n{i+1}/{total}')
-    
+    # Very important! Polite web scraping makes everyone happy 
+    time.sleep(3)
+
     # Defining search parameters
     auction_id = df_ids['auction_id'][i]
     uasg_id = df_ids['uasg_id'][i]
