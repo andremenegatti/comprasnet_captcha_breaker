@@ -1,5 +1,7 @@
 # comprasnet_captcha_breaker
 
+This python module allows the user to automate the process of downloading multiple auction reports from Comprasnet. The solution relies on using Convolutional Neural Networks to solve CAPTCHAs and ``selenium`` to interact with the web browser. The user must provide a list containing the 16-digit codes identifying the auctions of interest.
+
 ## Comprasnet and public procurement data in Brazil
 
 In Brazil, Federal-level public procurements for ordinary goods and services must take place as online auctions. One of the most used platforms for such procurement auctions is [Comprasnet](https://comprasgovernamentais.gov.br/index.php/comprasnet-siasg).
